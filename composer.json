@@ -1,0 +1,24 @@
+{
+    "name": "octo/skeleton",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kemal Yenilmez",
+            "email": "kemalyen@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "octo/encore": "dev-master"
+    },
+    "repositories": [{
+        "type": "path",
+        "url": "../core"
+    }]
+}

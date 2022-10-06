@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+require_once __DIR__."/../vendor/autoload.php";
+use Doctrine\ORM\Tools\Console\ConsoleRunner;
+use Doctrine\ORM\Tools\Console\EntityManagerProvider\SingleManagerProvider;
+
+require __DIR__ . '/../config/container.php';
+$entityManager = $container->get(Doctrine\ORM\EntityManager::class); 
+
+$commands = [
+    // If you want to add your own custom console commands,
+    // you can do so here.
+];
+
+ConsoleRunner::run(
+    new SingleManagerProvider($entityManager),
+    $commands
+);
