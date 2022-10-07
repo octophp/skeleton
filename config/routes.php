@@ -9,14 +9,14 @@ return function (Octo\Encore\Application $app, DI\Container$container): void {
     $app->router->map('GET', '/top-secret', 'App\Controllers\IndexController::top_secret')
         ->middlewares(
             [
-                $container->get('App\Middlewares\AuthMiddleware'),
-                $container->get('App\Middlewares\AuthPayloadMiddleware'),
+                $container->get('Octo\Encore\Middlewares\AuthMiddleware'),
+                $container->get('Octo\Encore\Middlewares\AuthPayloadMiddleware'),
             ]);
 
     $app->router->map('GET', '/books', 'App\Controllers\IndexController::books')->middlewares(
         [
-            $container->get('App\Middlewares\AuthMiddleware'),
-            $container->get('App\Middlewares\AuthPayloadMiddleware'),
+            $container->get('Octo\Encore\Middlewares\AuthMiddleware'),
+            $container->get('Octo\Encore\Middlewares\AuthPayloadMiddleware'),
         ]);
 
 };

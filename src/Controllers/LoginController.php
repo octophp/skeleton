@@ -25,6 +25,6 @@ class LoginController extends Controller
         if ($auth){
             return $this->view(['accessToken' => $auth]);
         }
-        return $this->view(['Login failed'], 401);
+        return $this->view(['Login failed' => $auth], 401);
     }
 }

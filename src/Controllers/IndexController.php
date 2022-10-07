@@ -17,9 +17,7 @@ class IndexController extends Controller
 
    public function index(ServerRequestInterface $request): JsonResponse
     {
-        var_dump($request);
-        die();
-        return $this->view(['test']);
+        return $this->view(['welcome' => time()]);
     }
 
     public function books(ServerRequestInterface $request): JsonResponse
