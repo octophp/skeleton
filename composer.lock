@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ec20e946022bb633add7e0d3a60e6a15",
+    "content-hash": "f9da71cd988811378ba706a6d0953a35",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1800,6 +1800,67 @@
             "time": "2022-08-20T13:21:44+00:00"
         },
         {
+            "name": "neomerx/cors-psr7",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/neomerx/cors-psr7.git",
+                "reference": "1f0f504384b891f6b2c3877d9f4372e9972eda22"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/neomerx/cors-psr7/zipball/1f0f504384b891f6b2c3877d9f4372e9972eda22",
+                "reference": "1f0f504384b891f6b2c3877d9f4372e9972eda22",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0.0",
+                "psr/http-message": "^1.0",
+                "psr/log": "^3.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.11",
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^9.2",
+                "scrutinizer/ocular": "^1.4",
+                "squizlabs/php_codesniffer": "^3.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Neomerx\\Cors\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "neomerx",
+                    "email": "info@neomerx.com"
+                }
+            ],
+            "description": "Framework agnostic (PSR-7) CORS implementation (www.w3.org/TR/cors/)",
+            "homepage": "https://github.com/neomerx/cors-psr7",
+            "keywords": [
+                "Cross Origin Resource Sharing",
+                "Cross-Origin Resource Sharing",
+                "cors",
+                "neomerx",
+                "psr-7",
+                "psr7",
+                "w3.org",
+                "www.w3.org"
+            ],
+            "support": {
+                "issues": "https://github.com/neomerx/cors-psr7/issues",
+                "source": "https://github.com/neomerx/cors-psr7/tree/develop"
+            },
+            "time": "2022-10-05T13:36:51+00:00"
+        },
+        {
             "name": "nikic/fast-route",
             "version": "v1.x-dev",
             "source": {
@@ -1995,11 +2056,11 @@
         },
         {
             "name": "octo/encore",
-            "version": "dev-master",
+            "version": "dev-main",
             "dist": {
                 "type": "path",
                 "url": "../core",
-                "reference": "6afcd6d298faa0b645d3fd994ebd3a5587ecd9ec"
+                "reference": "6aa81a22b56fe7e72dc72a3b1ef72e8fece312be"
             },
             "require": {
                 "doctrine/annotations": "1.14.x-dev",
@@ -2010,6 +2071,7 @@
                 "league/route": "6.x-dev",
                 "mezzio/mezzio-helpers": "5.10.x-dev",
                 "monolog/monolog": "3.x-dev",
+                "neomerx/cors-psr7": "dev-develop",
                 "nyholm/psr7": "^1.5",
                 "nyholm/psr7-server": "dev-master",
                 "php-di/php-di": "dev-master",
@@ -4236,9 +4298,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "octo/encore": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
