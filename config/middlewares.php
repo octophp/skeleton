@@ -1,9 +1,9 @@
 <?php
 
-return function (Octo\Encore\Application $app, DI\Container $container): void {
+return function (Octophp\Encore\Application $app, DI\Container $container): void {
     $app->router->middlewares(
         [
             $container->get('Mezzio\Helper\BodyParams\BodyParamsMiddleware'),
-            $container->get('Octo\Encore\Middlewares\CorsMiddleware'),
+            $container->get('Octophp\Encore\Middlewares\CorsMiddleware'),
         ]);
 };

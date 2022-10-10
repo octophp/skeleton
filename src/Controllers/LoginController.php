@@ -4,14 +4,14 @@ namespace App\Controllers;
 
 use Psr\Http\Message\ServerRequestInterface;
 use Laminas\Diactoros\Response\JsonResponse;
-use Octo\Encore\Controllers\Controller;
-use Octo\Encore\Services\AuthService;
+use Octophp\Encore\Controllers\Controller;
+use Octophp\Encore\Services\AuthService;
 
 class LoginController extends Controller
 {
     /**
      * @Inject
-     * @var Octo\Encore\Services\AuthService
+     * @var Octophp\Encore\Services\AuthService
      */
     private $authService;
 

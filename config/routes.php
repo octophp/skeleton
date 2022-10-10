@@ -1,6 +1,6 @@
 <?php
 
-return function (Octo\Encore\Application $app, DI\Container$container): void {
+return function (Octophp\Encore\Application $app, DI\Container$container): void {
     $app->router->map('GET', '/', 'App\Controllers\IndexController::index');
 
     $app->router->map('GET', '/books/{id}/show', 'App\Controllers\IndexController::show');
@@ -9,14 +9,14 @@ return function (Octo\Encore\Application $app, DI\Container$container): void {
     $app->router->map('GET', '/top-secret', 'App\Controllers\IndexController::top_secret')
         ->middlewares(
             [
-                $container->get('Octo\Encore\Middlewares\AuthMiddleware'),
-                $container->get('Octo\Encore\Middlewares\AuthPayloadMiddleware'),
+                $container->get('Octophp\Encore\Middlewares\AuthMiddleware'),
+                $container->get('Octophp\Encore\Middlewares\AuthPayloadMiddleware'),
             ]);
 
     $app->router->map('GET', '/books', 'App\Controllers\IndexController::books')->middlewares(
         [
-            $container->get('Octo\Encore\Middlewares\AuthMiddleware'),
-            $container->get('Octo\Encore\Middlewares\AuthPayloadMiddleware'),
+            $container->get('Octophp\Encore\Middlewares\AuthMiddleware'),
+            $container->get('Octophp\Encore\Middlewares\AuthPayloadMiddleware'),
         ]);
 
 };

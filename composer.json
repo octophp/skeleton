@@ -15,10 +15,6 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "octo/encore": "*"
-    },
-    "repositories": [{
-        "type": "path",
-        "url": "../core"
-    }]
+        "octophp/encore": "dev-main"
+    }
 }

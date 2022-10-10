@@ -1,6 +1,6 @@
 <?php
-use Octo\Encore\Middlewares\AuthMiddleware;
-use Octo\Encore\Middlewares\CorsMiddleware;
+use Octophp\Encore\Middlewares\AuthMiddleware;
+use Octophp\Encore\Middlewares\CorsMiddleware;
 use Psr\Container\ContainerInterface;
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
@@ -9,11 +9,11 @@ use Neomerx\Cors\Strategies\Settings;
 
 
 return [
-    'Octo\Encore\Middlewares\AuthMiddleware' => function (ContainerInterface $c) {
+    'Octophp\Encore\Middlewares\AuthMiddleware' => function (ContainerInterface $c) {
         return new AuthMiddleware($c->get('JWT_SECRET'), $c->get('JWT_TOKEN_KEY'));
     },
 
-    'Octo\Encore\Middlewares\CorsMiddleware' => function (ContainerInterface $c) {
+    'Octophp\Encore\Middlewares\CorsMiddleware' => function (ContainerInterface $c) {
 
         $settings = (new Settings())
                 ->setServerOrigin('http', 'localhost', 8000)

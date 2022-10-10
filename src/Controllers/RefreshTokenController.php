@@ -2,8 +2,8 @@
 
 namespace App\Controllers;
 
-use Octo\Encore\Services\AuthService;
-use Octo\Encore\Controllers\Controller;
+use Octophp\Encore\Services\AuthService;
+use Octophp\Encore\Controllers\Controller;
 use Laminas\Diactoros\Response\JsonResponse;
 use Psr\Http\Message\ServerRequestInterface;
 
@@ -11,7 +11,7 @@ class RefreshTokenController extends Controller
 {
     /**
      * @Inject
-     * @var Octo\Encore\Services\AuthService
+     * @var Octophp\Encore\Services\AuthService
      */
     private $authService;
 

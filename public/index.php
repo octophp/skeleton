@@ -11,7 +11,7 @@ chdir(dirname(__DIR__));
 require 'vendor/autoload.php';
 
 $container = require 'config/container.php';
-$app = new \Octo\Encore\Application($container, $start_at);
+$app = new \Octophp\Encore\Application($container, $start_at);
 $app->router();
 (require 'config/routes.php')($app, $container);
 (require 'config/middlewares.php')($app, $container);

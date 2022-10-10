@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use Psr\Http\Message\ServerRequestInterface;
 use Laminas\Diactoros\Response\JsonResponse;
-use Octo\Encore\Controllers\Controller;
+use Octophp\Encore\Controllers\Controller;
 use App\Services\BookService;
 
 class IndexController extends Controller
