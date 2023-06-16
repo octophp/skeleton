@@ -6,6 +6,8 @@ use Psr\Http\Message\ServerRequestInterface;
 use Laminas\Diactoros\Response\JsonResponse;
 use Octophp\Encore\Controllers\Controller;
 use Octophp\Encore\Services\AuthService;
+use DI\Attribute\Inject;
+
 
 class LoginController extends Controller
 {
@@ -13,6 +15,7 @@ class LoginController extends Controller
      * @Inject
      * @var Octophp\Encore\Services\AuthService
      */
+    #[Inject(AuthService::class)]
     private $authService;
 
    public function login(ServerRequestInterface $request): JsonResponse

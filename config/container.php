@@ -11,7 +11,7 @@ $definitions = array_merge(
  
 
 $containerBuilder = new DI\ContainerBuilder;
-$containerBuilder->useAnnotations(true);
+$containerBuilder->useAttributes(true);
 $containerBuilder->addDefinitions($definitions);
 $container = $containerBuilder->build();
 return $container;
